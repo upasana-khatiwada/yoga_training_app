@@ -7,7 +7,7 @@ class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      Size size = MediaQuery.of(context).size;
-     return ClipRect(
+     return ClipPath(
       clipper: CurveClipper(),
       child: Container(
         height: size.height * 0.55,
