@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yoga_training_app/screens/background_image.dart';
-
+import 'package:yoga_training_app/screens/login_credentials.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -13,12 +13,15 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          BackgroundImage(),
-          LoginScreen(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            BackgroundImage(),
+            LoginCredentials(),
+           
+          ],
+        ),
       ),
     );
   }
