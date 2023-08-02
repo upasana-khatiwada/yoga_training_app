@@ -57,12 +57,34 @@ class CustomAppBar extends StatelessWidget {
           ),
           Row(
             children: [
-              const Icon(Icons.notifications_none_rounded,size: 30.0,),
-              const SizedBox(width: 40,),
+              Stack(children: [
+                const Icon(
+                  Icons.notifications_none_rounded,
+                  size: 30.0,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: primary,
+                    borderRadius: BorderRadius.circular(30.0),
+
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(appPadding/5),
+                    child: Text('0',style: TextStyle(color: white,fontSize: 8),),
+                  ),
+                )
+              ],
+              ),
+              const SizedBox(
+                width: 30,
+              ),
               //const Icon(Icons.sort_rounded,size: 30.0,)
               Transform(
                 transform: Matrix4.rotationY(math.pi),
-                child: const Icon(Icons.sort_rounded,size: 30.0,),
+                child: const Icon(
+                  Icons.sort_rounded,
+                  size: 30.0,
+                ),
               ),
             ],
           )
