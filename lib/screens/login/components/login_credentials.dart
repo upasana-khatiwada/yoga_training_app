@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yoga_training_app/constants/constants.dart';
+import 'package:yoga_training_app/screens/home/home_screen.dart';
 
 class LoginCredentials extends StatelessWidget {
   const LoginCredentials({super.key});
@@ -44,7 +45,7 @@ class LoginCredentials extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: size.height*0.04,
+            height: size.height * 0.04,
           ),
           Material(
             elevation: 10.0,
@@ -68,7 +69,48 @@ class LoginCredentials extends StatelessWidget {
                     color: black.withOpacity(0.4),
                   )),
             ),
-          ), 
+          ),
+          SizedBox(
+            height: size.height * 0.04,
+          ),
+          Center(
+            child: Text(
+              "Forget Password!",
+              style: TextStyle(
+                fontSize: 18,
+                color: black.withOpacity(0.4),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: size.height * 0.04,
+          ),
+          InkWell(
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => const HomeScreen(),
+                )),
+            child: Material(
+              elevation: 10.0,
+              shadowColor: primary,
+              color: primary,
+              borderRadius: BorderRadius.circular(30.0),
+              // ignore: sized_box_for_whitespace
+              child: Container(
+                width: size.width,
+                height: size.width * 0.15,
+                child: const Center(
+                  child: Text(
+                    "Log In",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

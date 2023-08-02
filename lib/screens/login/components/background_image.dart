@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yoga_training_app/constants/constants.dart';
-import 'package:yoga_training_app/screens/curve_clipper.dart';
+import 'package:yoga_training_app/screens/login/components/curve_clipper.dart';
 class BackgroundImage extends StatelessWidget {
   const BackgroundImage({super.key});
 
