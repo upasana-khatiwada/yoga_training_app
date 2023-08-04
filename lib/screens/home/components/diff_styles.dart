@@ -96,6 +96,7 @@ class DiffStyles extends StatelessWidget {
                 ],
               ),
             )),
+            // ignore: avoid_unnecessary_containers
             Container(
               child: Positioned(
                 right: 0,
